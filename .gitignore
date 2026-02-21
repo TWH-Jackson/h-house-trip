@@ -1,0 +1,6 @@
+.gemini/
+.codeoss/
+.idx/
+.cache/
+node_modules/
+dist/
