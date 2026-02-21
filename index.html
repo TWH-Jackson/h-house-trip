@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>我的旅遊計畫</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H-HOUSE TRIP | 旅遊計畫</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        body { font-family: 'Noto Sans TC', 'Noto Sans JP', sans-serif; background-color: #F3F4F6; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
+      body { font-family: 'Noto Sans TC', 'Noto Sans JP', sans-serif; background-color: #F3F4F6; }
+      .hide-scroll::-webkit-scrollbar { display: none; }
+      .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+      #map-container { z-index: 1; }
+      .gps-pulse {
+          width: 14px; height: 14px; border: 2px solid #fff; border-radius: 50%;
+          background-color: #3b82f6; box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+          animation: pulse-blue 2s infinite;
+      }
+      @keyframes pulse-blue {
+          0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+          70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+      }
+      .leaflet-popup-content-wrapper { border-radius: 12px; padding: 0; overflow: hidden; }
+      .leaflet-popup-content { margin: 0; width: 200px !important; }
     </style>
-  <script type="module" crossorigin src="/h-house-trip/assets/index-Dvetqqun.js"></script>
-</head>
-<body>
-    <div id="root"></div> 
-</body>
+    <script type="module" crossorigin src="/h-house-trip/assets/index-Bo0eIyWx.js"></script>
+  </head>
+  <body class="text-slate-700 h-screen flex flex-col overflow-hidden">
+    <div id="root" class="h-full w-full"></div>
+  </body>
 </html>
